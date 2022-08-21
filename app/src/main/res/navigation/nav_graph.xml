@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/viewPager">
+
+    <fragment
+        android:id="@+id/viewPager"
+        android:name="com.olisemeka.whatsappclone.ViewPager"
+        android:label="@string/whatsapp"
+        tools:layout="@layout/fragment_view_pager">
+        <action
+            android:id="@+id/action_viewPager_to_newChatFragment"
+            app:destination="@id/newChatFragment" />
+        <action
+            android:id="@+id/action_viewPager_to_newCallFragment"
+            app:destination="@id/newCallFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newChatFragment"
+        android:name="com.olisemeka.whatsappclone.ui.chats.NewChatFragment"
+        android:label="@string/select_contact"
+        tools:layout="@layout/fragment_new_chat" />
+    <fragment
+        android:id="@+id/newCallFragment"
+        android:name="com.olisemeka.whatsappclone.ui.calls.NewCallFragment"
+        android:label="@string/select_contact"
+        tools:layout="@layout/fragment_new_call" />
+</navigation>
